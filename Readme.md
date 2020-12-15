@@ -7,8 +7,8 @@ This is my Flask template that I use to build flask based web-services. It has a
 In the following table you should document the resources of your rest-api to make it easier to understand:
 | Resource | Method | Path | Used to | Parameters | error-codes |
 | --- | --- | --- | --- | --- | --- |
-| Register a user | POST | /register | username:str, password:str | 200 OK | 
-| Store a sentence | POST | /store | username:str, password:str, sentence:str | 200 OK, 301 Out of Tokens, 302 Invalid Username Password Combination |
-| Retrive a sentence | POST | /get | username:str, password: str | 200 OK, 301 Out of Tokens, 302 Invalid Username Password Combination |
+| Register as a new user | POST  | /register | username:str, password:str | 200 OK , 301 Invalid Username | 
+| Detect similarity between two documents | POST | /detect | username: str, password: str, document1:str, document2:str| 200 OK, 301 Invalid Username, 302 Invalid password, 303 Out of tokens |
+| Add new tokens for a specific user | POST | /refill | username:str, admin\_pw:str, refill\_amount:int | 200 OK, 301 Invalid Username, 304 Invalid admin password |
 
 Happy Hacking!
