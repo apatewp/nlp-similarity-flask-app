@@ -1,0 +1,15 @@
+version: '3'
+services:
+  dev:
+    build:
+      context: ./
+      dockerfile: dev.Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - "./src:/usr/src:rw"
+    links:
+      - mongo-db
+  mongo-db:
+    image: mongo
+    restart: always
